@@ -110,7 +110,7 @@ const ROI = () => {
             <div style={{ padding: '1rem', background: 'rgba(0,255,65,0.1)', borderRadius: '15px', display: 'inline-flex', marginBottom: '1.5rem', border: '1px solid rgba(0,255,65,0.2)' }}>
               <Smartphone size={32} color="var(--neon-green)" />
             </div>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', lineHeight: 1.1, color: 'var(--pure-white)' }}>
+            <h2 className="title-md" style={{ color: 'var(--pure-white)' }}>
               Your Brand.<br/>Your Own <span className="text-neon">Mobile App.</span>
             </h2>
             <p style={{ color: 'var(--gray-medium)', fontSize: '1.1rem', marginBottom: '2.5rem', lineHeight: 1.6 }}>
@@ -150,18 +150,25 @@ const ROI = () => {
           
           <div style={{ order: 1 }}>
             <div style={{ padding: '1rem', background: 'rgba(0,255,65,0.1)', borderRadius: '15px', display: 'inline-flex', marginBottom: '1.5rem', border: '1px solid rgba(0,255,65,0.2)' }}><Bot size={32} color="var(--neon-green)" /></div>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', lineHeight: 1.1, color: 'var(--pure-white)' }}>
+            <h2 className="title-md" style={{ color: 'var(--pure-white)' }}>
               Stop Missing Calls.<br/>Welcome Your <span className="text-neon">Voice AI.</span>
             </h2>
             
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginTop: '2rem' }}>
-              <div style={{ background: 'rgba(255,51,51,0.05)', padding: '1.5rem', borderRadius: '15px', borderLeft: '4px solid #ff3333' }}>
-                <h4 style={{ color: '#ff3333', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}><PhoneMissed size={18} /> THE PROBLEM</h4>
-                <p style={{ color: 'rgba(255,255,255,0.7)', margin: 0, fontSize: '0.95rem', lineHeight: 1.6 }}>You are mid-fade and ignore the ringing phone. The caller books across the street. You just lost a cut, a tip, and a potential lifetime client.</p>
+            <p style={{ color: 'var(--gray-medium)', fontSize: '1.1rem', marginBottom: '2.5rem', lineHeight: 1.6 }}>
+              Our 24/7 Voice AI Receptionist handles all your inbound calls. It sounds exactly like a human, can answer complex questions about your services, and books appointments directly into your calendar without you ever having to put down your clippers.
+            </p>
+            
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
+              <div style={{ background: 'rgba(255,51,51,0.03)', padding: '1.5rem', borderRadius: '16px', border: '1px solid rgba(255,51,51,0.15)', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '3px', background: '#ff3333' }} />
+                <h4 style={{ color: '#ff3333', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '1px' }}><PhoneMissed size={16} /> Without AI</h4>
+                <p style={{ color: 'rgba(255,255,255,0.65)', margin: 0, fontSize: '0.95rem', lineHeight: 1.6 }}>You are mid-fade and ignore the ringing phone. The caller books across the street, costing you a cut, a tip, and a lifetime client.</p>
               </div>
-              <div style={{ background: 'rgba(0,255,65,0.05)', padding: '1.5rem', borderRadius: '15px', borderLeft: '4px solid var(--neon-green)' }}>
-                <h4 style={{ color: 'var(--neon-green)', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}><CheckCircle2 size={18} /> THE BARBERSCALE SOLUTION</h4>
-                <p style={{ color: 'rgba(255,255,255,0.8)', margin: 0, fontSize: '0.95rem', lineHeight: 1.6 }}>Our AI Agent answers instantly, sounds exactly like a human receptionist, and books them right into your calendar 24/7/365.</p>
+              
+              <div style={{ background: 'rgba(0,255,65,0.05)', padding: '1.5rem', borderRadius: '16px', border: '1px solid rgba(0,255,65,0.2)', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '3px', background: 'var(--neon-green)' }} />
+                <h4 style={{ color: 'var(--neon-green)', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '1px' }}><CheckCircle2 size={16} /> With AI</h4>
+                <p style={{ color: 'rgba(255,255,255,0.85)', margin: 0, fontSize: '0.95rem', lineHeight: 1.6 }}>Our AI Agent answers instantly, handling inquiries and booking them right into your calendar. Zero missed calls, guaranteed.</p>
               </div>
             </div>
           </div>
@@ -233,21 +240,24 @@ const ROI = () => {
 
           <div>
             <div style={{ padding: '1rem', background: 'rgba(0,255,65,0.1)', borderRadius: '15px', display: 'inline-flex', marginBottom: '1.5rem', border: '1px solid rgba(0,255,65,0.2)' }}><MessageSquare size={32} color="var(--neon-green)" /></div>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', lineHeight: 1.1, color: 'var(--pure-white)' }}>
+            <h2 className="title-md" style={{ color: 'var(--pure-white)' }}>
               Destroy No-Shows.<br/>Dominate <span className="text-neon">Google.</span>
             </h2>
             <p style={{ color: 'var(--gray-medium)', fontSize: '1.1rem', marginBottom: '2.5rem', lineHeight: 1.6 }}>
               Our booking engine requires deposits, drastically cutting your no-show rate. As soon as a client leaves, BarberScale automatically texts them for a Google Review, flooding your page with 5-star ratings.
             </p>
             
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1rem 1.5rem', borderRadius: '12px', borderLeft: '3px solid var(--neon-green)' }}>
-                <strong style={{ display: 'block', color: 'var(--pure-white)', fontSize: '1.05rem', marginBottom: '0.25rem' }}>Mandatory Deposits</strong>
-                <span style={{ color: 'var(--gray-medium)', fontSize: '0.95rem' }}>If they ghost, you still get paid for your time. Period.</span>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
+              <div style={{ background: 'rgba(0,255,65,0.05)', padding: '1.5rem', borderRadius: '16px', border: '1px solid rgba(0,255,65,0.2)', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '3px', background: 'var(--neon-green)' }} />
+                <h4 style={{ color: 'var(--neon-green)', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', fontSize: '0.95rem', letterSpacing: '0.5px' }}><DollarSign size={18} /> Mandatory Deposits</h4>
+                <p style={{ color: 'rgba(255,255,255,0.85)', margin: 0, fontSize: '0.95rem', lineHeight: 1.6 }}>Protect your time. If a client no-shows or ghosts you, you still get paid for the appointment slot. Period.</p>
               </div>
-              <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1rem 1.5rem', borderRadius: '12px', borderLeft: '3px solid var(--neon-green)' }}>
-                <strong style={{ display: 'block', color: 'var(--pure-white)', fontSize: '1.05rem', marginBottom: '0.25rem' }}>Negative Review Shield</strong>
-                <span style={{ color: 'var(--gray-medium)', fontSize: '0.95rem' }}>Unhappy clients are routed to a private feedback form. Happy clients are pushed straight to Google.</span>
+              
+              <div style={{ background: 'rgba(0,255,65,0.05)', padding: '1.5rem', borderRadius: '16px', border: '1px solid rgba(0,255,65,0.2)', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '3px', background: 'var(--neon-green)' }} />
+                <h4 style={{ color: 'var(--neon-green)', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', fontSize: '0.95rem', letterSpacing: '0.5px' }}><CheckCircle2 size={18} /> Review Shield</h4>
+                <p style={{ color: 'rgba(255,255,255,0.85)', margin: 0, fontSize: '0.95rem', lineHeight: 1.6 }}>Unhappy clients are routed to a private feedback form. Happy clients are instantly guided to leave a 5-star Google review.</p>
               </div>
             </div>
           </div>
@@ -274,7 +284,7 @@ const ROI = () => {
             maxWidth: '900px'
           }}>
             <Calculator size={48} color="var(--neon-green)" style={{ marginBottom: '1.5rem' }} className="anim-float" />
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'var(--pure-white)' }}>Curious About Your ROI?</h2>
+            <h2 className="title-md" style={{ color: 'var(--pure-white)' }}>Curious About Your ROI?</h2>
             <p style={{ color: 'var(--gray-medium)', marginBottom: '2.5rem', fontSize: '1.15rem', maxWidth: '500px' }}>
               Find out exactly how much revenue you're bleeding to missed calls and no-shows each month. Use our interactive calculator.
             </p>
@@ -459,7 +469,7 @@ const ROI = () => {
                     <TrendingUp size={22} color="var(--neon-green)" /> The Impact
                   </h3>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '2rem' }}>
+                  <div className="split-layout" style={{ gap: '1.5rem', marginBottom: '2rem', alignItems: 'start' }}>
                     <div className="metric-box" style={{ padding: '1.5rem', background: 'rgba(255,51,51,0.03)', border: '1px solid rgba(255,51,51,0.15)', borderRadius: '16px', display: 'flex', flexDirection: 'column' }}>
                       <PhoneMissed size={26} color="#ff3333" style={{ marginBottom: '1rem' }} />
                       <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.5rem' }}>Missed Calls</div>
