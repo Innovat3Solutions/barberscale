@@ -1,11 +1,8 @@
 {
-  "buildCommand": "cd barberscale-app && npm install && npm run build",
+  "installCommand": "cd barberscale-app && npm install",
+  "buildCommand": "cd barberscale-app && npm run build",
   "outputDirectory": "barberscale-app/dist",
-  "framework": "vite",
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
