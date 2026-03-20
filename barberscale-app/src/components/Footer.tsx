@@ -462,7 +462,7 @@ const Footer = () => {
           }}>
             Powered by{' '}
             <a
-              href="https://innovat3solutions.com"
+              href="https://www.innovat3solutions.com"
               target="_blank"
               rel="noopener noreferrer"
               style={{

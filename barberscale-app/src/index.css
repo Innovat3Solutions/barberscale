@@ -1290,7 +1290,6 @@ html, body {
 
   .central-widget {
     padding: 1rem !important;
-    transform: translate(-50%, -50%) scale(0.85) !important;
   }
 
   .central-widget .large-value {
@@ -1298,55 +1297,109 @@ html, body {
   }
 
   /* PremiumApp Section Mobile */
+  #premium-app {
+    padding: 4rem 0 !important;
+  }
+
   .premium-split {
-    gap: 2rem !important;
+    gap: 2.5rem !important;
+  }
+
+  /* Show phone first on mobile */
+  .premium-visual {
+    order: -1;
+    margin-bottom: 0.5rem;
   }
 
   .premium-content {
     text-align: center;
   }
 
-  .premium-content .title-lg {
-    font-size: clamp(1.5rem, 6vw, 2rem) !important;
+  /* Badge styling for mobile */
+  .premium-content > div:first-child {
+    margin: 0 auto 1rem !important;
   }
 
-  .premium-content p {
-    font-size: 1rem !important;
-    margin-bottom: 2rem !important;
+  .premium-content .title-lg {
+    font-size: clamp(1.5rem, 6vw, 2rem) !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .premium-content .title-lg br {
+    display: none;
+  }
+
+  .premium-content > p {
+    font-size: 0.95rem !important;
+    margin-bottom: 1.5rem !important;
+    line-height: 1.5 !important;
+    max-width: 100% !important;
   }
 
   .premium-features {
-    gap: 1.5rem !important;
+    gap: 1rem !important;
+    background: rgba(0, 255, 65, 0.03);
+    border: 1px solid rgba(0, 255, 65, 0.1);
+    border-radius: 16px;
+    padding: 1rem;
   }
 
   .premium-feature-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    text-align: left !important;
+    gap: 0.75rem !important;
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .premium-feature-item:last-child {
+    border-bottom: none;
   }
 
   .premium-icon-box {
-    width: 48px !important;
-    height: 48px !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 10px !important;
+    flex-shrink: 0;
+  }
+
+  .premium-icon-box svg {
+    width: 18px !important;
+    height: 18px !important;
   }
 
   .premium-feature-item h4 {
-    font-size: 1.1rem !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 0.15rem !important;
   }
 
   .premium-feature-item p {
-    font-size: 0.9rem !important;
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
+    margin-top: 0 !important;
+  }
+
+  /* CTA button on mobile */
+  .premium-content > div:last-child {
+    margin-top: 1.5rem !important;
+  }
+
+  .premium-content .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.875rem 1.5rem !important;
+    font-size: 0.95rem !important;
   }
 
   /* Phone mockup scaling for mobile */
   .mockup-phone-container {
-    max-width: 280px !important;
+    max-width: 260px !important;
     margin: 0 auto;
   }
 
   .mockup-phone {
-    height: 560px !important;
+    height: 520px !important;
     border-radius: 32px !important;
     padding: 8px !important;
   }
@@ -1571,6 +1624,803 @@ html, body {
 
   #pricing .data-frame > div:nth-child(4) {
     font-size: 2rem !important;
+  }
+}
+
+/* ========== MOCKUP GRID (InteractiveMockups) ========== */
+.mockup-grid {
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+@media (max-width: 992px) {
+  .mockup-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+}
+
+/* ========== HERO FLOATING WIDGETS FIX ========== */
+.hero-floating-widget {
+  display: flex;
+}
+
+@media (max-width: 1200px) {
+  .hero-floating-widget {
+    display: none !important;
+  }
+}
+
+/* ========== ENGINE SECTION MOBILE ========== */
+#engine h2 {
+  font-size: clamp(1.75rem, 6vw, 3rem);
+}
+
+#engine p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+@media (max-width: 768px) {
+  #engine {
+    padding: 4rem 0 !important;
+  }
+
+  #engine .engine-controls {
+    padding: 1.5rem !important;
+  }
+
+  #engine .slider-group {
+    margin-bottom: 1rem !important;
+  }
+
+  #engine .dashboard-panel {
+    padding: 1.5rem !important;
+  }
+
+  #engine .stat-value {
+    font-size: 1.5rem !important;
+  }
+
+  #engine .stat-row.total-row .stat-value {
+    font-size: 1.75rem !important;
+  }
+}
+
+/* ========== PRICING SECTION MOBILE FIXES ========== */
+#pricing h2 {
+  font-size: clamp(1.75rem, 6vw, 3.5rem) !important;
+}
+
+#pricing > div > .container > div:nth-child(4) {
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  #pricing {
+    padding: 4rem 0 !important;
+  }
+
+  #pricing > div > .container > div:nth-child(4) {
+    grid-template-columns: 1fr !important;
+  }
+
+  #pricing .data-frame {
+    transform: none !important;
+    padding: 1.5rem !important;
+  }
+
+  #pricing .data-frame h3 {
+    font-size: 1.5rem !important;
+  }
+
+  #pricing .data-frame > div:nth-child(4) {
+    font-size: 2.5rem !important;
+  }
+}
+
+/* ========== FEATURE GRAPHICS MOBILE IMPROVEMENTS ========== */
+@media (max-width: 768px) {
+  .feature-graphic-container {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .feature-graphic-container .floating-badge {
+    transform: scale(0.85);
+  }
+
+
+  /* Hide orbit circles on very small screens */
+  .feature-graphic-container .orbit-circle {
+    display: none;
+  }
+
+  /* Scale down connection lines */
+  .feature-graphic-container .connection-line {
+    opacity: 0.3;
+  }
+}
+
+/* ========== PREMIUM VISUAL SECTION FIX ========== */
+@media (max-width: 768px) {
+  .premium-phone-glow-subtle {
+    opacity: 0.08 !important;
+    filter: blur(60px) !important;
+  }
+
+  /* Disable float animation on mobile for cleaner look */
+  .mockup-phone-container.anim-float {
+    animation: none !important;
+  }
+}
+
+/* ========== DEMO SECTION MOBILE (InteractiveMockups) ========== */
+@media (max-width: 768px) {
+  #demo {
+    padding: 4rem 0 !important;
+  }
+
+  #demo .data-frame {
+    padding: 1.25rem !important;
+  }
+
+  #demo .data-frame h3 {
+    font-size: 1.1rem !important;
+  }
+
+  #demo .split-layout {
+    gap: 1rem !important;
+  }
+
+  #demo .split-layout > div {
+    padding: 1rem !important;
+  }
+
+  #demo .split-layout > div > div:first-child {
+    font-size: 1.75rem !important;
+  }
+
+  #demo ul li {
+    padding: 1rem !important;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+  }
+
+  #demo ul li strong {
+    font-size: 0.9rem !important;
+  }
+
+  #demo ul li span {
+    font-size: 0.8rem !important;
+  }
+
+  /* Voice AI section mobile */
+  #demo .bg-speed-lines {
+    padding: 1.5rem !important;
+  }
+
+  #demo .bg-speed-lines h3 {
+    font-size: 1.1rem !important;
+  }
+
+  #demo .bg-speed-lines > div:last-child > div {
+    padding: 1rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  #demo .bg-speed-lines > div:last-child > div p {
+    font-size: 0.85rem !important;
+    margin: 0 !important;
+  }
+}
+
+/* ========== FAQ SECTION MOBILE ========== */
+#faq h2 {
+  font-size: clamp(1.75rem, 6vw, 3rem) !important;
+}
+
+@media (max-width: 768px) {
+  #faq {
+    padding: 4rem 0 !important;
+  }
+
+  #faq .glass-card > div:first-child {
+    padding: 1rem 1.25rem !important;
+  }
+
+  #faq .glass-card h3 {
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
+  }
+
+  #faq .glass-card > div:last-child {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  #faq .glass-card p {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* ========== FEATURE CARD INNER ELEMENTS MOBILE ========== */
+@media (max-width: 768px) {
+  /* SMS chat widget in Review Automation card */
+  .feature-graphic-container > div[style*="width: 160px"] {
+    width: 140px !important;
+    font-size: 0.65rem !important;
+    padding: 0.5rem !important;
+  }
+
+  /* Central widgets responsive */
+  .central-widget h4 {
+    font-size: 0.85rem !important;
+  }
+
+  .central-widget .large-value {
+    font-size: 1.5rem !important;
+  }
+
+  /* Voice AI waveform */
+  .central-widget[style*="border-radius: 50%"] {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  /* Marketing campaign widget */
+  .central-widget[style*="overflow: hidden"] {
+    width: 90% !important;
+  }
+}
+
+/* ========== ADDITIONAL SMALL SCREEN FIXES ========== */
+@media (max-width: 480px) {
+  /* Hero badge - ensure it doesn't overflow */
+  .hero .container > div > div:first-child {
+    padding: 0.4rem 0.75rem !important;
+  }
+
+  .hero .container > div > div:first-child span {
+    font-size: 0.6rem !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  /* Feature floating badges - make smaller */
+  .floating-badge {
+    font-size: 0.65rem !important;
+    padding: 0.3rem 0.5rem !important;
+  }
+
+  /* Premium features - tighter layout */
+  .premium-features {
+    padding: 0.75rem !important;
+  }
+
+  .premium-feature-item {
+    gap: 0.6rem !important;
+    padding: 0.4rem !important;
+  }
+
+  .premium-icon-box {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .premium-icon-box svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .premium-feature-item h4 {
+    font-size: 0.85rem !important;
+  }
+
+  .premium-feature-item p {
+    font-size: 0.75rem !important;
+  }
+
+  .mockup-phone-container {
+    max-width: 240px !important;
+  }
+
+  .mockup-phone {
+    height: 480px !important;
+  }
+}
+
+/* ========== PRICING GRID & CAROUSEL ========== */
+.pricing-carousel-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Desktop - scale up popular card */
+@media (min-width: 1025px) {
+  .pricing-card-popular {
+    transform: scale(1.05);
+    z-index: 2;
+  }
+}
+
+/* Swipe hint - hidden on desktop */
+.pricing-swipe-hint {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .pricing-grid .data-frame {
+    transform: none !important;
+  }
+
+  .pricing-card-popular {
+    transform: none !important;
+  }
+}
+
+/* ========== MOBILE PRICING CAROUSEL ========== */
+@media (max-width: 768px) {
+  .pricing-carousel-wrapper {
+    margin: 0 -1rem;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .pricing-carousel {
+    display: flex !important;
+    gap: 1rem !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem 1rem 1.5rem !important;
+    margin-top: 0 !important;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .pricing-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pricing-carousel .pricing-card {
+    flex: 0 0 85%;
+    min-width: 280px;
+    max-width: 320px;
+    scroll-snap-align: center;
+    padding: 1.5rem !important;
+    transform: none !important;
+  }
+
+  .pricing-carousel .pricing-card h3 {
+    font-size: 1.5rem !important;
+  }
+
+  .pricing-carousel .pricing-amount {
+    font-size: 2.5rem !important;
+  }
+
+  .pricing-carousel .pricing-card ul li {
+    font-size: 0.9rem !important;
+  }
+
+  /* Swipe hint visible on mobile */
+  .pricing-swipe-hint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0 0;
+    color: var(--gray-medium);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .pricing-swipe-hint .swipe-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .pricing-swipe-hint .swipe-dots .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+  }
+
+  .pricing-swipe-hint .swipe-dots .dot:nth-child(2) {
+    background: var(--neon-green);
+    box-shadow: 0 0 8px rgba(0,255,65,0.5);
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 400px) {
+  .pricing-carousel .pricing-card {
+    flex: 0 0 90%;
+    min-width: 260px;
+    padding: 1.25rem !important;
+  }
+
+  .pricing-carousel .pricing-amount {
+    font-size: 2.25rem !important;
+  }
+}
+
+/* ========== FEATURES GRID & CAROUSEL ========== */
+.features-carousel-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Swipe hint - hidden on desktop */
+.features-swipe-hint {
+  display: none;
+}
+
+/* ========== MOBILE FEATURES CAROUSEL ========== */
+@media (max-width: 768px) {
+  .features-carousel-wrapper {
+    margin: 0 -1rem;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .features-carousel {
+    display: flex !important;
+    gap: 1rem !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.5rem 1rem 1.5rem !important;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .features-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .features-carousel .feature-card {
+    flex: 0 0 85%;
+    min-width: 280px;
+    max-width: 320px;
+    scroll-snap-align: center;
+  }
+
+  .features-carousel .feature-card:hover {
+    transform: none;
+  }
+
+  /* Swipe hint visible on mobile */
+  .features-swipe-hint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0 0;
+    color: var(--gray-medium);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .features-swipe-hint .swipe-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .features-swipe-hint .swipe-dots .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+  }
+
+  .features-swipe-hint .swipe-dots .dot:first-child {
+    background: var(--neon-green);
+    box-shadow: 0 0 8px rgba(0,255,65,0.5);
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 400px) {
+  .features-carousel .feature-card {
+    flex: 0 0 90%;
+    min-width: 260px;
+  }
+}
+
+/* ========== MARKETING CAMPAIGNS CARD MOBILE ========== */
+@media (max-width: 768px) {
+  /* Make the Marketing Campaigns central widget wider */
+  .feature-card:last-child .central-widget {
+    width: 95% !important;
+    max-width: none !important;
+  }
+
+  .feature-card:last-child .central-widget > div:first-child {
+    padding: 1rem !important;
+    gap: 0.75rem !important;
+  }
+
+  .feature-card:last-child .central-widget > div:first-child > div:last-child {
+    flex: 1;
+  }
+
+  .feature-card:last-child .central-widget > div:first-child > div:last-child > div:first-child {
+    font-size: 0.9rem !important;
+  }
+
+  .feature-card:last-child .central-widget > div:first-child > div:last-child > div:last-child {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* ========== APPOINTMENT REMINDERS CARD STYLES ========== */
+.sms-conversation-widget {
+  padding: 0.75rem !important;
+  width: 85%;
+  max-width: 260px;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 10;
+}
+
+.sms-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 0.5rem;
+}
+
+.sms-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.sms-title {
+  font-size: 0.8rem;
+  color: var(--pure-white);
+}
+
+.sms-outgoing {
+  width: 100%;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px 8px 8px 0;
+  padding: 0.6rem;
+  text-align: left;
+  font-size: 0.7rem;
+  color: var(--gray-light);
+  line-height: 1.4;
+}
+
+.sms-typing {
+  background: rgba(0,255,65,0.1);
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  margin-top: 0.4rem;
+  display: inline-flex;
+  gap: 4px;
+}
+
+.sms-typing .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--neon-green);
+  animation: dot-bounce 1s infinite alternate;
+}
+
+.sms-typing .dot:nth-child(2) { animation-delay: 0.2s; }
+.sms-typing .dot:nth-child(3) { animation-delay: 0.4s; }
+
+.sms-incoming {
+  width: 100%;
+  background: rgba(0,255,65,0.15);
+  border-radius: 8px 8px 0 8px;
+  padding: 0.4rem 0.6rem;
+  text-align: right;
+  font-size: 0.75rem;
+  margin-top: 0.4rem;
+  border: 1px solid rgba(0,255,65,0.3);
+  color: var(--neon-green);
+  font-weight: 600;
+}
+
+/* ========== VOICE AI CARD STYLES ========== */
+.voice-ai-center {
+  border-radius: 50% !important;
+  width: 90px !important;
+  height: 90px !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 10;
+}
+
+.voice-waveform {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 24px;
+}
+
+.voice-bar {
+  width: 3px;
+  background: var(--neon-green);
+  border-radius: 2px;
+}
+
+/* ========== MOBILE STYLES FOR FEATURE CARDS ========== */
+@media (max-width: 768px) {
+  /* Appointment Reminders Mobile */
+  .appointment-reminders-graphic {
+    height: 200px !important;
+  }
+
+  .sms-conversation-widget {
+    width: 90% !important;
+    max-width: none !important;
+    padding: 0.6rem !important;
+    transform: translate(-50%, -50%) scale(0.9) !important;
+  }
+
+  .sms-title {
+    font-size: 0.7rem !important;
+  }
+
+  .sms-icon {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  .sms-check {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  .sms-outgoing {
+    padding: 0.5rem !important;
+    font-size: 0.65rem !important;
+  }
+
+  .sms-incoming {
+    padding: 0.35rem 0.5rem !important;
+    font-size: 0.7rem !important;
+  }
+
+  .appointment-badge-top,
+  .appointment-badge-bottom {
+    transform: scale(0.85);
+  }
+
+  .appointment-badge-top {
+    top: 2% !important;
+    right: 2% !important;
+  }
+
+  .appointment-badge-bottom {
+    bottom: 5% !important;
+    left: 0% !important;
+  }
+
+  /* Voice AI Mobile */
+  .voice-ai-graphic {
+    height: 180px !important;
+  }
+
+  .voice-ai-center {
+    width: 70px !important;
+    height: 70px !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .voice-waveform {
+    gap: 2px;
+    height: 20px;
+  }
+
+  .voice-bar {
+    width: 2.5px;
+  }
+
+  .voice-orbit-1,
+  .voice-orbit-2 {
+    display: none !important;
+  }
+
+  .voice-badge {
+    transform: scale(0.8);
+  }
+
+  .voice-badge-1 {
+    top: 5% !important;
+    left: 3% !important;
+  }
+
+  .voice-badge-2 {
+    top: 5% !important;
+    right: 3% !important;
+  }
+
+  .voice-badge-3 {
+    bottom: 5% !important;
+    right: 3% !important;
+  }
+
+  .voice-badge .badge-icon {
+    width: 10px !important;
+    height: 10px !important;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 400px) {
+  .appointment-reminders-graphic {
+    height: 180px !important;
+  }
+
+  .sms-conversation-widget {
+    transform: translate(-50%, -50%) scale(0.85) !important;
+  }
+
+  .appointment-badge-top,
+  .appointment-badge-bottom {
+    font-size: 0.6rem !important;
+    padding: 0.25rem 0.4rem !important;
+  }
+
+  .voice-ai-graphic {
+    height: 160px !important;
+  }
+
+  .voice-ai-center {
+    width: 60px !important;
+    height: 60px !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .voice-badge {
+    transform: scale(0.75);
+    font-size: 0.55rem !important;
+    padding: 0.2rem 0.35rem !important;
+  }
+
+  .voice-badge-1 {
+    top: 3% !important;
+    left: 0% !important;
+  }
+
+  .voice-badge-2 {
+    top: 3% !important;
+    right: 0% !important;
+  }
+
+  .voice-badge-3 {
+    bottom: 3% !important;
+    right: 0% !important;
   }
 }
 

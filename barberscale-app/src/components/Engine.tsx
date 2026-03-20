@@ -40,7 +40,7 @@ const Engine = () => {
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <h2 style={{ fontSize: '3rem', marginBottom: '1rem' }}>The <span className="text-neon">BarberScale Engine</span></h2>
+          <h2 className="title-lg">The <span className="text-neon">BarberScale Engine</span></h2>
           <p style={{ maxWidth: '700px', margin: '0 auto', fontSize: '1.2rem' }}>
             Interactive ROI Calculator. See exactly how much revenue you're losing to the "Old Way" and how our automated engine recovers it.
           </p>

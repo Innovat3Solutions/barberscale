@@ -40,7 +40,7 @@ const FAQ = () => {
             <MessageSquare size={16} color="var(--neon-green)" />
             <span style={{ color: 'var(--neon-green)', fontWeight: 600, fontSize: '0.85rem', letterSpacing: '1px' }}>YOUR QUESTIONS ANSWERED</span>
           </div>
-          <h2 style={{ fontSize: '3rem', fontFamily: 'var(--font-heading)' }}>
+          <h2 className="title-lg">
             Frequently Asked <span className="text-neon">Questions</span>
           </h2>
         </div>

@@ -5,11 +5,11 @@ const InteractiveMockups = () => {
     <section id="demo" className="section-swoosh" style={{ padding: '6rem 0', backgroundColor: 'var(--gray-dark)' }}>
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <h2 style={{ fontSize: '3rem' }}>See The <span className="text-neon">Engine</span></h2>
+          <h2 className="title-lg">See The <span className="text-neon">Engine</span></h2>
           <p style={{ maxWidth: '600px', margin: '0 auto' }}>Live UI mockups showing how BarberScale operates your shop autonomously.</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(300px, 1.2fr) minmax(300px, 0.8fr)', gap: '3rem', alignItems: 'center' }}>
+        <div className="mockup-grid" style={{ display: 'grid', gap: '3rem', alignItems: 'center' }}>
           
           {/* Dashboard Mockup */}
           <div className="data-frame" style={{ padding: '2rem' }}>
@@ -17,7 +17,7 @@ const InteractiveMockups = () => {
               <h3 style={{ margin: 0 }}>Dashboard Overview</h3>
               <span className="data-mono" style={{ fontSize: '0.9rem', padding: '0.4rem 0.8rem', backgroundColor: 'rgba(0,255,65,0.1)', borderRadius: '4px' }}>STATUS: ACTIVE</span>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '2.5rem' }}>
+            <div className="split-layout" style={{ gap: '1.5rem', marginBottom: '2.5rem', alignItems: 'start' }}>
               <div style={{ backgroundColor: 'var(--void-black)', padding: '1.5rem', border: '1px solid rgba(0, 255, 65, 0.2)' }}>
                 <p style={{ margin: 0, textTransform: 'uppercase', fontSize: '0.8rem', color: 'var(--gray-medium)' }}>Calls Handled (Today)</p>
                 <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-heading)' }} className="text-neon">42</div>

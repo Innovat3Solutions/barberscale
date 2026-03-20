@@ -37,7 +37,7 @@ const PremiumApp = () => {
   };
 
   return (
-    <section id="premium-app" style={{ padding: '8rem 0', backgroundColor: '#020503', position: 'relative', overflow: 'hidden' }}>
+    <section id="premium-app" className="hero-padding" style={{ backgroundColor: '#020503', position: 'relative', overflow: 'hidden' }}>
       
       {/* Background ambient lighting */}
       <div style={{ position: 'absolute', top: '50%', right: '0', transform: 'translate(50%, -50%)', width: '800px', height: '800px', background: 'radial-gradient(circle, rgba(0,255,65,0.05) 0%, transparent 60%)', filter: 'blur(80px)', pointerEvents: 'none' }} />
@@ -52,7 +52,7 @@ const PremiumApp = () => {
               <span style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--neon-green)', letterSpacing: '1px', textTransform: 'uppercase', lineHeight: 1 }}>The Premium Tier</span>
             </div>
 
-            <h2 style={{ fontSize: '3.5rem', lineHeight: 1.1, marginBottom: '1.5rem', textTransform: 'uppercase', color: 'var(--pure-white)', textShadow: '0 4px 15px rgba(0,0,0,0.8)' }}>
+            <h2 className="title-lg" style={{ color: 'var(--pure-white)', textShadow: '0 4px 15px rgba(0,0,0,0.8)', textTransform: 'uppercase' }}>
               Your Brand, <br />
               <span className="text-neon" style={{ fontStyle: 'italic' }}>Your App.</span>
             </h2>

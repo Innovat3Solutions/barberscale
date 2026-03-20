@@ -1,7 +1,7 @@
 {
   "framework": "vite",
-  "installCommand": "npm install --prefix barberscale-app",
-  "buildCommand": "npm run build --prefix barberscale-app",
+  "installCommand": "cd barberscale-app && npm install",
+  "buildCommand": "cd barberscale-app && npm run build",
   "outputDirectory": "barberscale-app/dist",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }

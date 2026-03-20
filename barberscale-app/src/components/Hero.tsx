@@ -107,7 +107,7 @@ const Hero = () => {
         {/* Positioned relative to the main .container so they sit on the outer edges of the 1200px bounds */}
         
         {/* Widget 1: Voice AI */}
-        <div className="glass-card anim-pop" style={{ 
+        <div className="glass-card anim-pop hero-floating-widget" style={{
           position: 'absolute', top: '15%', left: '-18%', width: '220px', padding: '1.2rem',
           transform: 'rotate(-5deg)', zIndex: -1, display: 'flex', alignItems: 'center', gap: '1rem',
           animationDelay: '0s'
@@ -122,7 +122,7 @@ const Hero = () => {
         </div>
 
         {/* Widget 2: Auto Scheduling */}
-        <div className="glass-card anim-pop" style={{ 
+        <div className="glass-card anim-pop hero-floating-widget" style={{
           position: 'absolute', top: '40%', right: '0%', width: '200px', padding: '1.2rem',
           transform: 'rotate(3deg)', zIndex: -1, display: 'flex', alignItems: 'center', gap: '1rem',
           animationDelay: '2s'
@@ -137,7 +137,7 @@ const Hero = () => {
         </div>
 
         {/* Widget 3: Growth */}
-        <div className="glass-card anim-pop" style={{ 
+        <div className="glass-card anim-pop hero-floating-widget" style={{
           position: 'absolute', bottom: '10%', left: '10%', width: '240px', padding: '1.2rem',
           transform: 'rotate(-2deg)', zIndex: -1, display: 'flex', alignItems: 'center', gap: '1rem',
           animationDelay: '4s'

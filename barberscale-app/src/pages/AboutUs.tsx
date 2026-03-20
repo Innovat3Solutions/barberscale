@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const AboutUs = () => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', width: '100%', overflowX: 'hidden' }}>
 
       {/* Hero Section */}
       <section className="about-hero" style={{ padding: '6rem 0 4rem', backgroundColor: 'var(--void-black)', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', top: '-10%', left: '50%', transform: 'translateX(-50%)', width: '100vw', height: '100vw', maxWidth: '800px', maxHeight: '800px', background: 'radial-gradient(circle, rgba(0,255,65,0.08) 0%, transparent 70%)', zIndex: 0, pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', top: '-10%', left: '50%', transform: 'translateX(-50%)', width: '100%', height: '100vw', maxWidth: '800px', maxHeight: '800px', background: 'radial-gradient(circle, rgba(0,255,65,0.08) 0%, transparent 70%)', zIndex: 0, pointerEvents: 'none' }} />
 
         <div className="container" style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
           <div className="badge neon" style={{ display: 'inline-flex', marginBottom: '1.5rem' }}>Our Mission</div>
@@ -38,7 +38,7 @@ const AboutUs = () => {
               </p>
 
               <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
-                <a href="https://innovat3.com" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                <a href="https://www.innovat3solutions.com" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                   <Building2 size={18} /> Discover Innovat3
                 </a>
               </div>
@@ -75,45 +75,59 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <div className="pain-points-grid">
-            {/* Card 1: DMs */}
-            <div className="pain-card glass-card">
-              <div className="pain-accent" />
-              <div className="pain-icon">
-                <MessageSquare size={24} color="#ff3333" />
+          {/* Desktop Grid / Mobile Carousel */}
+          <div className="pain-points-carousel-wrapper">
+            <div className="pain-points-grid pain-points-carousel">
+              {/* Card 1: DMs */}
+              <div className="pain-card glass-card">
+                <div className="pain-accent" />
+                <div className="pain-icon">
+                  <MessageSquare size={24} color="#ff3333" />
+                </div>
+                <h4>Manual Booking DMs</h4>
+                <p>Wasting hours every week locked in endless back-and-forth messages just to secure a single appointment slot.</p>
               </div>
-              <h4>Manual Booking DMs</h4>
-              <p>Wasting hours every week locked in endless back-and-forth messages just to secure a single appointment slot.</p>
+
+              {/* Card 2: Calls */}
+              <div className="pain-card glass-card">
+                <div className="pain-accent" />
+                <div className="pain-icon">
+                  <PhoneMissed size={24} color="#ff3333" />
+                </div>
+                <h4>Mid-Cut Disruptions</h4>
+                <p>Stopping a flawless fade to answer a ringing phone disrupts the client experience and breaks your flow.</p>
+              </div>
+
+              {/* Card 3: Follow-Ups */}
+              <div className="pain-card glass-card">
+                <div className="pain-accent" />
+                <div className="pain-icon">
+                  <Clock size={24} color="#ff3333" />
+                </div>
+                <h4>Chasing Follow-Ups</h4>
+                <p>Manually hunting down clients to confirm appointments or ask for their review is tedious and unprofessional.</p>
+              </div>
+
+              {/* Card 4: Billing */}
+              <div className="pain-card glass-card">
+                <div className="pain-accent" />
+                <div className="pain-icon">
+                  <Wallet size={24} color="#ff3333" />
+                </div>
+                <h4>No-Show Revenue Loss</h4>
+                <p>Eating the cost of last-minute cancellations without an automated deposit and billing system in place.</p>
+              </div>
             </div>
 
-            {/* Card 2: Calls */}
-            <div className="pain-card glass-card">
-              <div className="pain-accent" />
-              <div className="pain-icon">
-                <PhoneMissed size={24} color="#ff3333" />
+            {/* Swipe Indicator - Mobile Only */}
+            <div className="carousel-swipe-hint">
+              <span>Swipe to explore</span>
+              <div className="swipe-dots">
+                <span className="dot"></span>
+                <span className="dot"></span>
+                <span className="dot"></span>
+                <span className="dot"></span>
               </div>
-              <h4>Mid-Cut Disruptions</h4>
-              <p>Stopping a flawless fade to answer a ringing phone disrupts the client experience and breaks your flow.</p>
-            </div>
-
-            {/* Card 3: Follow-Ups */}
-            <div className="pain-card glass-card">
-              <div className="pain-accent" />
-              <div className="pain-icon">
-                <Clock size={24} color="#ff3333" />
-              </div>
-              <h4>Chasing Follow-Ups</h4>
-              <p>Manually hunting down clients to confirm appointments or ask for their review is tedious and unprofessional.</p>
-            </div>
-
-            {/* Card 4: Billing */}
-            <div className="pain-card glass-card">
-              <div className="pain-accent" />
-              <div className="pain-icon">
-                <Wallet size={24} color="#ff3333" />
-              </div>
-              <h4>No-Show Revenue Loss</h4>
-              <p>Eating the cost of last-minute cancellations without an automated deposit and billing system in place.</p>
             </div>
           </div>
 
@@ -145,12 +159,16 @@ const AboutUs = () => {
       </section>
 
       <style>{`
+        /* Desktop Grid Layout */
+        .pain-points-carousel-wrapper {
+          max-width: 1100px;
+          margin: 0 auto;
+        }
+
         .pain-points-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
           gap: 1.5rem;
-          max-width: 1100px;
-          margin: 0 auto;
         }
 
         .pain-card {
@@ -207,14 +225,44 @@ const AboutUs = () => {
           flex: 1;
         }
 
+        /* Swipe hint - hidden on desktop */
+        .carousel-swipe-hint {
+          display: none;
+        }
+
+        /* ========== MOBILE CAROUSEL ========== */
         @media (max-width: 768px) {
-          .pain-points-grid {
-            grid-template-columns: 1fr;
-            gap: 1rem;
+          .pain-points-carousel-wrapper {
+            margin: 0 -1rem;
+            padding: 0;
+            overflow: visible;
           }
 
-          .pain-card {
+          .pain-points-carousel {
+            display: flex !important;
+            gap: 1rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding: 0.5rem 1rem 1.5rem;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+          }
+
+          .pain-points-carousel::-webkit-scrollbar {
+            display: none;
+          }
+
+          .pain-points-carousel .pain-card {
+            flex: 0 0 85%;
+            min-width: 280px;
+            max-width: 320px;
+            scroll-snap-align: center;
             padding: 1.25rem;
+          }
+
+          .pain-card:hover {
+            transform: none;
           }
 
           .pain-card h4 {
@@ -225,8 +273,47 @@ const AboutUs = () => {
             font-size: 0.85rem;
           }
 
+          /* Swipe hint visible on mobile */
+          .carousel-swipe-hint {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0 0;
+            color: var(--gray-medium);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+          }
+
+          .swipe-dots {
+            display: flex;
+            gap: 6px;
+          }
+
+          .swipe-dots .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+          }
+
+          .swipe-dots .dot:first-child {
+            background: var(--neon-green);
+            box-shadow: 0 0 8px rgba(0,255,65,0.5);
+          }
+
           .about-hero {
             padding: 5rem 0 3rem !important;
+          }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 400px) {
+          .pain-points-carousel .pain-card {
+            flex: 0 0 90%;
+            min-width: 260px;
           }
         }
       `}</style>

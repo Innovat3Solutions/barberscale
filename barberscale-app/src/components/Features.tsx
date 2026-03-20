@@ -1,4 +1,4 @@
-import { Star, MessageSquare, Clock, Calendar, Zap, TrendingUp, Send, CheckCircle2, UserCircle2 } from 'lucide-react';
+import { Star, MessageSquare, Calendar, Zap, TrendingUp, Send, CheckCircle2, UserCircle2 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const Features = () => {
@@ -37,16 +37,18 @@ const Features = () => {
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
-          <h2 style={{ fontSize: '3.5rem', marginBottom: '1.5rem' }}>Why use <span className="text-neon">BarberScale?</span></h2>
+          <h2 className="title-lg" style={{ marginBottom: '1.5rem' }}>Why use <span className="text-neon">BarberScale?</span></h2>
           <p style={{ maxWidth: '600px', margin: '0 auto', fontSize: '1.125rem' }}>
             Built specifically for barbershops, our platform automates the busy work so you can focus entirely on delivering the perfect cut.
           </p>
         </div>
         
-        <div className="feature-grid">
-          
-          {/* Card 1: Review Automation */}
-          <div className="glass-card">
+        {/* Desktop Grid / Mobile Carousel Wrapper */}
+        <div className="features-carousel-wrapper">
+          <div className="feature-grid features-carousel">
+
+            {/* Card 1: Review Automation */}
+            <div className="glass-card feature-card">
             <div className="feature-content">
               <h3 className="feature-title">Review Automation</h3>
               <p className="feature-desc">
@@ -87,50 +89,50 @@ const Features = () => {
             </div>
           </div>
 
-          {/* Card 2: Appointment Reminders */}
-          <div className="glass-card">
+            {/* Card 2: Appointment Reminders */}
+            <div className="glass-card feature-card">
             <div className="feature-content">
               <h3 className="feature-title">Appointment Reminders</h3>
               <p className="feature-desc">
                 Reduce no-shows drastically. Send automated confirmation and reminder texts that clients can reply to directly to confirm or reschedule.
               </p>
             </div>
-            <div className="feature-graphic-container">
+            <div className="feature-graphic-container appointment-reminders-graphic">
               {/* Ambient Glow */}
-              <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '100%', height: '100%', background: 'radial-gradient(circle, rgba(0,255,65,0.05) 0%, transparent 60%)' }} />
-              
+              <div className="ambient-glow" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '100%', height: '100%', background: 'radial-gradient(circle, rgba(0,255,65,0.05) 0%, transparent 60%)' }} />
+
               {/* Floating Elements */}
-              <div className="floating-badge neon anim-slide-up" style={{ position: 'absolute', top: '5%', right: '5%', animationDuration: '6s', zIndex: 15 }}>
-                <TrendingUp size={14} /> <span>No-shows -85%</span>
+              <div className="floating-badge neon anim-slide-up appointment-badge-top" style={{ position: 'absolute', top: '5%', right: '5%', animationDuration: '6s', zIndex: 15 }}>
+                <TrendingUp size={14} className="badge-icon" /> <span className="badge-text">-85%</span>
               </div>
-              <div className="floating-badge dark anim-slide-up" style={{ position: 'absolute', bottom: '10%', left: '2%', animationDelay: '3s', animationDuration: '6s', zIndex: 15 }}>
-                <Clock size={14} /> Confirmed!
+              <div className="floating-badge dark anim-slide-up appointment-badge-bottom" style={{ position: 'absolute', bottom: '10%', left: '2%', animationDelay: '3s', animationDuration: '6s', zIndex: 15 }}>
+                <CheckCircle2 size={14} className="badge-icon" /> <span className="badge-text">Confirmed</span>
               </div>
 
               {/* Central Widget - Animated SMS Conversation */}
-              <div className="central-widget" style={{ padding: '1rem', width: '80%', zIndex: 10, maxWidth: '280px' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', marginBottom: '1rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.5rem' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <Calendar size={16} color="var(--neon-green)" />
-                    <span style={{ fontSize: '0.875rem' }}>Auto-Reminder Demo</span>
+              <div className="central-widget sms-conversation-widget">
+                <div className="sms-header">
+                  <div className="sms-header-left">
+                    <Calendar size={14} color="var(--neon-green)" className="sms-icon" />
+                    <span className="sms-title">Reminder</span>
                   </div>
-                  <CheckCircle2 size={16} color="var(--neon-green)" />
+                  <CheckCircle2 size={14} color="var(--neon-green)" className="sms-check" />
                 </div>
-                
+
                 {/* Outgoing Message */}
-                <div className="anim-msg-out" style={{ width: '100%', background: 'rgba(255,255,255,0.05)', borderRadius: '8px 8px 8px 0', padding: '0.75rem', textAlign: 'left', fontSize: '0.75rem' }}>
-                  "Hey John! Just confirming your fade at 3PM today. Reply YES to confirm."
+                <div className="anim-msg-out sms-outgoing">
+                  <span className="sms-text">"Confirming your fade at 3PM. Reply YES."</span>
                 </div>
-                
+
                 {/* Typing Indicator */}
-                <div className="anim-typing-indicator" style={{ background: 'rgba(0,255,65,0.1)', padding: '0.5rem', borderRadius: '8px', alignSelf: 'flex-start', marginTop: '0.5rem', display: 'flex', gap: '4px' }}>
-                  <div className="dot" style={{width: 6, height: 6, borderRadius: '50%', background: 'var(--neon-green)'}}></div>
-                  <div className="dot" style={{width: 6, height: 6, borderRadius: '50%', background: 'var(--neon-green)', animationDelay: '0.2s'}}></div>
-                  <div className="dot" style={{width: 6, height: 6, borderRadius: '50%', background: 'var(--neon-green)', animationDelay: '0.4s'}}></div>
+                <div className="anim-typing-indicator sms-typing">
+                  <div className="dot"></div>
+                  <div className="dot"></div>
+                  <div className="dot"></div>
                 </div>
 
                 {/* Incoming Message */}
-                <div className="anim-msg-in" style={{ width: '100%', background: 'rgba(0,255,65,0.15)', borderRadius: '8px 8px 0 8px', padding: '0.5rem 0.75rem', textAlign: 'right', alignSelf: 'flex-end', fontSize: '0.75rem', marginTop: '0.5rem', border: '1px solid rgba(0,255,65,0.3)', color: 'var(--neon-green)', fontWeight: 600 }}>
+                <div className="anim-msg-in sms-incoming">
                   YES 👍
                 </div>
               </div>
@@ -138,44 +140,44 @@ const Features = () => {
           </div>
 
           {/* Card 3: Voice AI Agent */}
-          <div className="glass-card">
+          <div className="glass-card feature-card">
             <div className="feature-content">
               <h3 className="feature-title">Voice AI Agent</h3>
               <p className="feature-desc">
                 An intelligent assistant that answers calls 24/7. It accesses your calendar in real-time to book clients with their favorite barber.
               </p>
             </div>
-            <div className="feature-graphic-container">
+            <div className="feature-graphic-container voice-ai-graphic">
               {/* Orbiting Tech Ring */}
-              <div className="orbit-circle" />
-              <div className="orbit-circle" style={{ width: '200px', height: '200px', borderStyle: 'dotted', animationDirection: 'reverse', animationDuration: '40s' }} />
-              
+              <div className="orbit-circle voice-orbit-1" />
+              <div className="orbit-circle voice-orbit-2" style={{ width: '200px', height: '200px', borderStyle: 'dotted', animationDirection: 'reverse', animationDuration: '40s' }} />
+
               {/* Central Widget - AI Waveform */}
-              <div className="central-widget central-widget-glow" style={{ borderRadius: '50%', width: '100px', height: '100px', padding: 0, justifyContent: 'center', zIndex: 10 }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '4px', height: '30px' }}>
-                  <div className="anim-bar" style={{ width: '4px', background: 'var(--neon-green)', borderRadius: '2px', animationDelay: '0s' }} />
-                  <div className="anim-bar" style={{ width: '4px', background: 'var(--neon-green)', borderRadius: '2px', animationDelay: '0.1s' }} />
-                  <div className="anim-bar" style={{ width: '4px', background: 'var(--neon-green)', borderRadius: '2px', animationDelay: '0.2s' }} />
-                  <div className="anim-bar" style={{ width: '4px', background: 'var(--neon-green)', borderRadius: '2px', animationDelay: '0.15s' }} />
-                  <div className="anim-bar" style={{ width: '4px', background: 'var(--neon-green)', borderRadius: '2px', animationDelay: '0.05s' }} />
+              <div className="central-widget central-widget-glow voice-ai-center">
+                <div className="voice-waveform">
+                  <div className="anim-bar voice-bar" style={{ animationDelay: '0s' }} />
+                  <div className="anim-bar voice-bar" style={{ animationDelay: '0.1s' }} />
+                  <div className="anim-bar voice-bar" style={{ animationDelay: '0.2s' }} />
+                  <div className="anim-bar voice-bar" style={{ animationDelay: '0.15s' }} />
+                  <div className="anim-bar voice-bar" style={{ animationDelay: '0.05s' }} />
                 </div>
               </div>
 
               {/* Floating Orbit Nodes */}
-              <div className="floating-badge dark anim-pop" style={{ position: 'absolute', top: '5%', left: '5%', animationDelay: '1s', zIndex: 12 }}>
-                <UserCircle2 size={14} /> Inbound Call...
+              <div className="floating-badge dark anim-pop voice-badge voice-badge-1" style={{ position: 'absolute', top: '8%', left: '8%', animationDelay: '1s', zIndex: 12 }}>
+                <UserCircle2 size={12} className="badge-icon" /> <span className="badge-text">Incoming</span>
               </div>
-              <div className="floating-badge neon anim-pop" style={{ position: 'absolute', top: '15%', right: '2%', animationDelay: '3s', zIndex: 12 }}>
-                <Zap size={14} /> Intent: Booking
+              <div className="floating-badge neon anim-pop voice-badge voice-badge-2" style={{ position: 'absolute', top: '12%', right: '5%', animationDelay: '3s', zIndex: 12 }}>
+                <Zap size={12} className="badge-icon" /> <span className="badge-text">Booking</span>
               </div>
-              <div className="floating-badge dark anim-pop" style={{ position: 'absolute', bottom: '10%', right: '5%', animationDelay: '5s', zIndex: 12 }}>
-                <Calendar size={14} /> Added to Cal
+              <div className="floating-badge dark anim-pop voice-badge voice-badge-3" style={{ position: 'absolute', bottom: '12%', right: '8%', animationDelay: '5s', zIndex: 12 }}>
+                <Calendar size={12} className="badge-icon" /> <span className="badge-text">Booked</span>
               </div>
             </div>
           </div>
 
           {/* Card 4: Marketing Campaigns */}
-          <div className="glass-card">
+          <div className="glass-card feature-card">
             <div className="feature-content">
               <h3 className="feature-title">Marketing Campaigns</h3>
               <p className="feature-desc">
@@ -222,6 +224,18 @@ const Features = () => {
             </div>
           </div>
 
+        </div>
+
+          {/* Swipe Indicator - Mobile Only */}
+          <div className="features-swipe-hint">
+            <span>Swipe to explore features</span>
+            <div className="swipe-dots">
+              <span className="dot"></span>
+              <span className="dot"></span>
+              <span className="dot"></span>
+              <span className="dot"></span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
